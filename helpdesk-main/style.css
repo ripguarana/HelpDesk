@@ -1,0 +1,339 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+    --tinta: #1B2430;
+    --tinta-suave: #4A5568;
+    --linha: #DDE2E8;
+    --fundo: #F4F6F8;
+    --superficie: #FFFFFF;
+    --sinal: #2F6F5E;
+    --sinal-fundo: #E7F1EE;
+    --alerta: #B5502F;
+    --foco: #2F6F5E;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', system-ui, sans-serif;
+    background: var(--fundo);
+    color: var(--tinta);
+}
+
+h1,
+.topo-marca {
+    font-family: 'Space Grotesk', 'Inter', system-ui, sans-serif;
+}
+
+/* Cabeçalho */
+
+.topo {
+    background: var(--superficie);
+    border-bottom: 1px solid var(--linha);
+}
+
+.topo-conteudo {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 18px 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.topo-marca {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.topo-nav {
+    display: flex;
+    gap: 24px;
+}
+
+.topo-nav a {
+    color: var(--tinta-suave);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+}
+
+.topo-nav a:hover,
+.topo-nav a.ativo {
+    color: var(--tinta);
+    border-bottom-color: var(--sinal);
+}
+
+/* Conteúdo principal */
+
+.conteudo {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 40px 24px 80px;
+}
+
+.conteudo-larga {
+    max-width: 1000px;
+}
+
+.cartao {
+    background: var(--superficie);
+    border: 1px solid var(--linha);
+    border-radius: 10px;
+    padding: 40px;
+}
+
+h1 {
+    font-size: 25px;
+    font-weight: 600;
+    margin: 0 0 8px;
+    letter-spacing: -0.01em;
+}
+
+.subtitulo {
+    margin: 0 0 32px;
+    color: var(--tinta-suave);
+    font-size: 15px;
+    line-height: 1.5;
+    max-width: 60ch;
+}
+
+/* Formulário */
+
+.campo {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-size: 13px;
+    color: var(--tinta);
+    margin-bottom: 6px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 11px 12px;
+    border: 1px solid var(--linha);
+    border-radius: 7px;
+    font-size: 14px;
+    font-family: inherit;
+    color: var(--tinta);
+    background: var(--superficie);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--foco);
+    box-shadow: 0 0 0 3px rgba(47, 111, 94, 0.15);
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* Botão */
+
+.botao-principal {
+    width: 100%;
+    padding: 13px;
+    background: var(--tinta);
+    color: var(--superficie);
+    border: none;
+    border-radius: 7px;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    margin-top: 8px;
+}
+
+.botao-principal:hover {
+    background: #2A364A;
+}
+
+/* Mensagem de status */
+
+.mensagem-status {
+    min-height: 20px;
+    margin: 16px 0 0;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.mensagem-status.sucesso {
+    color: var(--sinal);
+}
+
+.mensagem-status.erro {
+    color: var(--alerta);
+}
+
+/* Cabeçalho da listagem */
+
+.cabecalho-lista {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 30px;
+}
+
+.cabecalho-lista .subtitulo {
+    margin-bottom: 0;
+}
+
+.campo-filtro {
+    min-width: 190px;
+    margin-bottom: 0;
+}
+
+/* Lista de chamados */
+
+.lista-chamados {
+    display: grid;
+    gap: 16px;
+}
+
+.cartao-chamado {
+    background: var(--superficie);
+    border: 1px solid var(--linha);
+    border-radius: 10px;
+    padding: 24px;
+}
+
+.cartao-chamado-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.numero-chamado {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--tinta-suave);
+}
+
+.badge-prioridade {
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.prioridade-baixa {
+    background: #E7F1EE;
+    color: #2F6F5E;
+}
+
+.prioridade-média {
+    background: #FFF2D8;
+    color: #946200;
+}
+
+.prioridade-alta {
+    background: #FCE8E5;
+    color: #B5502F;
+}
+
+.titulo-chamado {
+    font-size: 18px;
+    margin: 0 0 10px;
+}
+
+.descricao-chamado {
+    color: var(--tinta-suave);
+    font-size: 14px;
+    line-height: 1.6;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    margin: 0 0 16px;
+}
+
+.data-chamado {
+    display: block;
+    color: var(--tinta-suave);
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+.rodape-chamado {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    border-top: 1px solid var(--linha);
+    padding-top: 16px;
+}
+
+.rotulo-status {
+    margin: 0;
+    font-weight: 600;
+}
+
+.select-status {
+    max-width: 190px;
+}
+
+/* Mensagem quando não há chamados */
+
+.mensagem-vazia {
+    text-align: center;
+    color: var(--tinta-suave);
+    background: var(--superficie);
+    border: 1px solid var(--linha);
+    border-radius: 10px;
+    padding: 30px;
+}
+
+/* Responsividade */
+
+@media (max-width: 600px) {
+    .topo-conteudo {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .topo-nav {
+        gap: 18px;
+    }
+
+    .conteudo {
+        padding: 24px 16px 50px;
+    }
+
+    .cartao {
+        padding: 24px;
+    }
+
+    .cabecalho-lista {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .campo-filtro {
+        width: 100%;
+    }
+
+    .rodape-chamado {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .select-status {
+        max-width: none;
+    }
+}
